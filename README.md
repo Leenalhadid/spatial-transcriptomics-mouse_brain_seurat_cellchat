@@ -30,3 +30,35 @@ https://icbb-share.s3.eu-central-1.amazonaws.com/single-cell-bioinformatics/scbi
 ![15](https://github.com/user-attachments/assets/b9cec21d-ce1b-4f78-a9e1-f192a08c7c09)
 ![666](https://github.com/user-attachments/assets/78f44031-21e2-4f11-b2d7-e4515dae2331)
 
+
+## ⚙️ System Setup
+
+Before running the analysis, ensure your R environment is properly configured with the required packages.
+
+### 🖥️ 1. General Setup (All Users)
+
+Open an R session and run the following:
+
+```r
+# Install devtools if not already installed
+install.packages("devtools")
+
+# Install CellChat from GitHub
+devtools::install_github("sqjin/CellChat")
+
+# Install Seurat and other commonly used packages
+install.packages(c("Seurat", "patchwork", "ggplot2", "dplyr", "Matrix"))
+
+# Install Bioconductor manager
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+### Some packages may need manual installation on Windows
+
+# SCDC for deconvolution
+devtools::install_github("meichendong/SCDC")
+
+# glmGamPoi (used in SCTransform)
+devtools::install_github("const-ae/glmGamPoi")
+
+# BiocNeighbors (used in Seurat integration)
+BiocManager::install("BiocNeighbors")
