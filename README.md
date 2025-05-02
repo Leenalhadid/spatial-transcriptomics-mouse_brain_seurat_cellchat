@@ -35,8 +35,6 @@ https://icbb-share.s3.eu-central-1.amazonaws.com/single-cell-bioinformatics/scbi
 
 Before running the analysis, ensure your R environment is properly configured with the required packages.
 
-## ⚙️ System Setup
-
 ### 🖥️ 1. General Setup (All Users)
 
 Open an R session and run the following:
@@ -57,7 +55,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 # SCDC for deconvolution
 devtools::install_github("meichendong/SCDC")
 ````
-Some packages may need manual installation on Windows:
+🖥️ Some packages may need manual installation on Windows:
 ```r
 # glmGamPoi (used in SCTransform)
 devtools::install_github("const-ae/glmGamPoi")
