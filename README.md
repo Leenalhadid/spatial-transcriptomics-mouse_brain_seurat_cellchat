@@ -35,6 +35,8 @@ https://icbb-share.s3.eu-central-1.amazonaws.com/single-cell-bioinformatics/scbi
 
 Before running the analysis, ensure your R environment is properly configured with the required packages.
 
+## ⚙️ System Setup
+
 ### 🖥️ 1. General Setup (All Users)
 
 Open an R session and run the following:
@@ -52,16 +54,15 @@ install.packages(c("Seurat", "patchwork", "ggplot2", "dplyr", "Matrix"))
 # Install Bioconductor manager
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
- ```r
-
-### Some packages may need manual installation on Windows
-```r
 # SCDC for deconvolution
 devtools::install_github("meichendong/SCDC")
-
+````
+Some packages may need manual installation on Windows:
+```r
 # glmGamPoi (used in SCTransform)
 devtools::install_github("const-ae/glmGamPoi")
 
 # BiocNeighbors (used in Seurat integration)
 BiocManager::install("BiocNeighbors")
-```r
+```
+
