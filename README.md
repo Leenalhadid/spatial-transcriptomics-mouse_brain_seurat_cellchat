@@ -51,7 +51,8 @@ install.packages(c("Seurat", "patchwork", "ggplot2", "dplyr", "Matrix"))
 
 # Install Bioconductor manager
 if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager") ```r
+    install.packages("BiocManager")
+ ```r
 
 ### Some packages may need manual installation on Windows
 ```r
@@ -62,4 +63,5 @@ devtools::install_github("meichendong/SCDC")
 devtools::install_github("const-ae/glmGamPoi")
 
 # BiocNeighbors (used in Seurat integration)
-BiocManager::install("BiocNeighbors")```r
+BiocManager::install("BiocNeighbors")
+```r
